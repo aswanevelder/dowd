@@ -1,0 +1,260 @@
+﻿@model Quote
+
+@{
+    ViewData["Title"] = "QUOTE - ";
+}
+<nav class="menu">
+    <ul class="menu-nav">
+        <li class="menu-nav__item">
+            <a href="/" class="menu-nav__link">
+                <img src="img/logo.png" class="menu-nav__logo">
+            </a>
+        </li>
+        <li class="menu-nav__item">
+            <a href="/#products" class="menu-nav__link">
+                <svg class="menu-nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-printer"></use>
+                </svg>
+                <span>Products</span>
+            </a>
+        </li>
+        <li class="menu-nav__item menu-nav__item--active">
+            <a href=" quote" class="menu-nav__link">
+                <svg class=" menu-nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-clipboard"></use>
+                </svg>
+                <span>Quotes</span>
+            </a>
+        </li>
+        <li class="menu-nav__item">
+            <a href="contact" class="menu-nav__link">
+                <svg class="menu-nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-envelop"></use>
+                </svg>
+                <span>Contact us</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+<main class="main-view">
+    <form asp-action="Index" method="post" enctype="multipart/form-data">
+        <div class="form">
+            <h1 id="products" class="main-view__heading">GET QUOTE</h1>
+            <div class="form__card">
+                <div class="form__card-row">
+                    <div class="form__card-col">
+                        <div class="input__group">
+                            <label asp-for="Company" class="input__label-required"></label>
+                            <input asp-for="Company" class="input__control">
+                            <span asp-validation-for="Company" class="input__validation"></span>
+                        </div>
+                    </div>
+                    <div class="form__card-col">
+                        <div class="input__group">
+                            <label asp-for="ContactPerson" class="input__label-required"></label>
+                            <input asp-for="ContactPerson" class="input__control">
+                            <span asp-validation-for="ContactPerson" class="input__validation"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__card-row">
+                    <div class="form__card-col">
+                        <div class="input__group">
+                            <label asp-for="Email" class="input__label-required"></label>
+                            <input asp-for="Email" class="input__control">
+                            <span asp-validation-for="Email" class="input__validation"></span>
+                        </div>
+                    </div>
+                    <div class="form__card-col">
+                        <div class="input__group">
+                            <label asp-for="Phone" class="input__label"></label>
+                            <input asp-for="Phone" class="input__control">
+                            <span asp-validation-for="Phone" class="input__validation"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__card-row">
+                    <div class="form__card-col">
+                        <div class="input__group">
+                            <span class="input__label-required">Product Choice</span>
+                            <div class="input__radiogroup">
+                                @foreach (var product in @Model.Products)
+                                {
+                                    <label class="input__radio">@product
+                                        <input type="radio" asp-for="Product" value="@product">
+                                        <span class="input__radio-check"></span>
+                                    </label>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__card-row">
+                    <div class="form__card-col">
+                        <div class="input__group">
+                            <span class="input__label">Upload Artwork</span>
+                            <div id="drop-area">
+                                <p class="input__p"><b>Choose files with button below. ***</b></p>
+                                <input class="btn" type="file" id="fileElem" multiple><br /><br />
+                                <p class="input__p">*** File Format for Artwork: PDF (our first choice) CDR, JPEG, BMP,
+                                    EPS.
+                                    Files to create artwork for proof: CDR (our first choice), EPS, DWG, DXF, VECTOR
+                                    PDF.
+                                    Problematic files, will delay process jpeg, bmp, non-vector PDF (file has been
+                                    flattened
+                                    or rasterised)</p><br />
+                                <p class="input__p">*** Please add any photos of space available for installation.</p>
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__card-row">
+                    <div class="form__card-col">
+                        <div class="input__group">
+                            <label asp-for="Width" class="input__label"></label>
+                            <input type="number" min="0" max="999999" asp-for="Width" class="input__control">
+                            <span asp-validation-for="Width" class="input__label-required"></span>
+                        </div>
+                    </div>
+                    <div class="form__card-col">
+                        <div class="input__group">
+                            <label asp-for="Height" class="input__label"></label>
+                            <input type="number" min="0" max="999999" asp-for="Height" class="input__control">
+                            <span asp-validation-for="Height" class="input__label-required"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__card-row">
+                    <div class="form__card-col">
+                        <div class="input__group">
+                            <label asp-for="InstallationSpaceWidth" class="input__label"></label>
+                            <input type="number" min="0" max="999999" asp-for="InstallationSpaceWidth"
+                                class="input__control">
+                            <span asp-validation-for="InstallationSpaceWidth" class="input__label-required"></span>
+                        </div>
+                    </div>
+                    <div class="form__card-col">
+                        <div class="input__group">
+                            <label asp-for="InstallationSpaceHeight" class="input__label"></label>
+                            <input type="number" min="0" max="999999" asp-for="InstallationSpaceHeight"
+                                class="input__control">
+                            <span asp-validation-for="InstallationSpaceHeight" class="input__label-required"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__card-row">
+                    <div class="form__card-col">
+                        <div class="input__group">
+                            <label asp-for="Quantity" class="input__label"></label>
+                            <input type="number" min="1" max="999999" asp-for="Quantity" class="input__control">
+                            <span asp-validation-for="Quantity" class="input__label-required"></span>
+                        </div>
+                    </div>
+                    <div class="form__card-col">
+                        <div class="input__group">
+                            <label asp-for="Material" class="input__label"></label>
+                            <select asp-for="Material" class="input__control">
+                                <option value="Aluminium">Aluminium </option>
+                                <option value="Stainless steel">Stainless steel </option>
+                                <option value="Brass">Brass </option>
+                                <option value="Copper">Copper </option>
+                                <option value="Mild steel">Mild steel </option>
+                                <option value="Chromadek">Chromadek </option>
+                                <option value="Vinyl">Vinyl </option>
+                                <option value="Perspex">Perspex </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__card-row">
+                    <div class="form__card-col">
+                        <div class="input__group">
+                            <span class="input__label">Attachment Requirement</span>
+                            <div class="input__radiogroup">
+                                <label asp-for="AttachPegs" class="input__radio"> PEGS
+                                    <input type="checkbox" asp-for="AttachPegs">
+                                    <span class="input__radio-check"></span>
+                                </label>
+                                <label asp-for="AttachAdhesive" class="input__radio">ADHESIVE
+                                    <input type="checkbox" asp-for="AttachAdhesive">
+                                    <span class="input__radio-check"></span>
+                                </label>
+                                <label asp-for="AttachHoles" class="input__radio">HOLES
+                                    <input type="checkbox" asp-for="AttachHoles">
+                                    <span class="input__radio-check"></span>
+                                </label>
+                                <label class="input__radio">SPACERS
+                                    <input asp-for="AttachSpacers" type="checkbox" asp-for="AttachSpacers">
+                                    <span class="input__radio-check"></span>
+                                </label>
+                                <label class="input__radio">LABEL
+                                    <input asp-for="AttachLabelPins" type="checkbox">
+                                    <span asp-for="AttachLabelPins" class="input__radio-check"></span>
+                                </label>
+                                <label asp-for="AttachMagneticStrip" class="input__radio">MAGNETIC STRIP
+                                    <input type="checkbox" asp-for="AttachMagneticStrip">
+                                    <span class="input__radio-check"></span>
+                                </label>
+                                <label asp-for="AttachMount" class="input__radio">MOUNT
+                                    <input type="checkbox" asp-for="AttachMount">
+                                    <span class="input__radio-check"></span>
+                                </label>
+                                <label asp-for="AttachOther" class="input__radio">OTHER
+                                    <input type="checkbox" asp-for="AttachOther">
+                                    <span class="input__radio-check"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__card-row">
+                    <div class="form__card-col">
+                        <div class="input__group">
+                            <span class="input__label">Installation (fixing) required?</span>
+                            <div class="input__radiogroup">
+                                <label asp-for="InstallationRequired" class="input__radio">YES
+                                    <input type="radio" asp-for="InstallationRequired" value="true" checked="checked">
+                                    <span class="input__radio-check"></span>
+                                </label>
+                                <label asp-for="InstallationRequired" class="input__radio">NO
+                                    <input type="radio" asp-for="InstallationRequired" value="false">
+                                    <span class="input__radio-check"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__card-row">
+                    <div class="form__card-col">
+                        <div class="input__group">
+                            <span class="input__label">Where did you hear of Dowd?</span>
+                            <div class="input__radiogroup">
+                                @foreach (var how in @Model.Hows)
+                                {
+                                    <label class="input__radio">@how
+                                        <input type="radio" asp-for="HowDidYouFindUs" value="@how">
+                                        <span class="input__radio-check"></span>
+                                    </label>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__card-row">
+                    <div class="form__card-col">
+                        <div class="input__group">
+                            <label asp-for="Message" class="input__label"></label>
+                            <textarea asp-for="Message" class="input__control" rows="20"></textarea>
+                            <span asp-validation-for="Message" class="input__label-required"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-stretch">
+                <span class="btn__visible">GET QUOTE</span>
+                <span class="btn__invisible">SUBMIT</span>
+            </button>
+        </div>
+    </form>
+</main>

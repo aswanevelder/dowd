@@ -1,0 +1,79 @@
+:root {
+    --color-primary: #d8232f;
+    --color-secondary: #0571af;
+    --color-primary-light: #d8232f;
+    --color-primary-dark: #cf79a84d;
+    --color-primary-light-transparent: #7ebfd756;
+    --color-primary-dark-transparent: #cf79a84d;
+    --color-grey-light1: #faf9f9;
+    --color-grey-light2: #f4f2f2;
+    --color-grey-light3: #f0eeee;
+    --color-grey-light4: #ccc;
+    --color-grey-dark1: #333;
+    --color-grey-dark2: #777;
+    --color-grey-dark3: #999;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-green: #106100;
+    --color-green-light: #b8f5ab;
+    --color-red: rgb(255, 0, 0);
+    --color-primary-transparent: rgba(255,0,0,0.6);
+    --color-primary-transparent2: rgba(255,0,0,0.3);
+    --color-grey-dark1-transparent: rgba(0,0,0,0.6);
+    --color-grey-dark2-transparent: rgba(0,0,0,0.8);
+    --color-facebook: #3b5998;
+    --color-facebook-light: #c7d4f2;
+    --color-instagram1: #f09433;
+    --color-instagram2: #e6683c;
+    --color-instagram3: #dc2743;
+    --color-instagram4: #cc2366;
+    --color-instagram5: #bc1888;
+    --shadow-dark1: 0 2rem 6rem rgba(0,0,0,0.3);
+    --shadow-light1: 0 2rem 5rem rgba(0,0,0,.06);
+    --border-line: 1px solid var(--color-grey-light2);
+    --border-line-primary: 1px solid var(--color-primary);
+
+    
+
+}
+
+$bp_largest: 75em; //1200px / 16px (default screen) = 75 em
+$bp_large: 68.75em; //1100px / 16px (default screen) = 68.75 em
+$bp_medium: 56.25em; //900px / 16px (default screen) = 56.25 em
+$bp_small: 37.5em; //600px / 16px (default screen) = 37.5 
+$bp_smallest: 31.25em; //500px / 16px (default screen) = 31.25 
+$bp_smallest: 31.25em; //500px / 16px (default screen) = 31.25 
+$bp_tiny: 25em; //400px / 16px (default screen) = 25 
+$bp_micro: 20em; //320px / 16px (default screen) = 20 
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px explain 10px / 16px (browser default) = 62.5%
+
+    @media only screen and (max-width: $bp_large) {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--color-grey-dark2);
+    font-weight: 400;
+    line-height: 1.6;
+    min-height: 100vh;
+    background-color: var(--color-black);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+}

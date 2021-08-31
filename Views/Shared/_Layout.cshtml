@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]DOWD &mdash; IF YOU CAN THINK IT, WE CAN MAKE IT.</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+    <meta name="keywords"
+        content="LASER CUTTING, LASER ENGRAVING, CAD ENGRAVING, ENGRAVING, ETCHING, CNC CUTTING, SCREEN PRINTING, DIGITAL PRINTING, FLATBED PRINTING, VINYL APPLICATIONS, VEHICLE WRAPPING, WALLPAPER, ANODISING, SANDBLASTING, METAL WORKING, SIGN DESIGN, SIGN MANUFACTURING, SIGN INSTALLATION, SIGN MAINTENANCE ">
+    <meta name="description"
+        content="We design, create and install custommade signage and industrial nameplates, a wide range that will fit your every need. If you need any internal or external signage and nameplates that are acid etched, engraved, cnc machined, screen-printed, digital printed, anodised, or with vinyl application, we will manufacture it.">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="~/img/favicon.png">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <span class="header__label">DOWD Signage</span>
+            <nav class="user-nav">
+                <div class="header__social">
+                    <a class="header__link" href="tel:+27219481771" target="_blank">
+                        <svg class="header__link-icon">
+                            <use xlink:href="img/sprite.svg#icon-phone"></use>
+                        </svg>
+                        <span class="header__link-label">
+                            (021) 948-1771
+                        </span>
+                    </a>
+                </div>
+                <div class="header__social">
+                    <a class="header__link" href="mail:quotes@dowd.co.za" target="_blank">
+                        <svg class="header__link-icon">
+                            <use xlink:href="img/sprite.svg#icon-envelop"></use>
+                        </svg>
+                        <span class="header__link-label">
+                            quotes@dowd.co.za
+                        </span>
+                    </a>
+                </div>
+                <div class="header__social">
+                    <a class="header__link" href="https://sacoronavirus.co.za" target="_blank">
+                        <svg class="header__link-icon-social-color" fill="url(#green-gradient)">
+                            <linearGradient id="green-gradient" x2="0.35" y2="1">
+                                <stop offset="15%" stop-color="var(--color-green)" />
+                                <stop offset="100%" stop-color="var(--color-green-light)" />
+                            </linearGradient>
+                            <use xlink:href="img/sprite.svg#icon-virus"></use>
+                        </svg>
+                        <span class="header__link-label">
+                            COVID-19
+                        </span>
+                    </a>
+                </div>
+                <div class="header__social">
+                    <a class="header__link" href="https://www.facebook.com/DowdSignage/" target="_blank">
+                        <svg class="header__link-icon-social-color" fill="url(#facebook-gradient)">
+                            <linearGradient id="facebook-gradient" x2="0.35" y2="1">
+                                <stop offset="15%" stop-color="var(--color-facebook)" />
+                                <stop offset="100%" stop-color="var(--color-facebook-light)" />
+                            </linearGradient>
+                            <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="header__social">
+                    <a class="header__link" href="https://www.instagram.com/dowd_signage/" target="_blank">
+                        <svg class="header__link-icon-social-color" fill="url(#instagram-gradient)">
+                            <linearGradient id="instagram-gradient" x2="0.35" y2="1">
+                                <stop offset="0%" stop-color="var(--color-instagram1)" />
+                                <stop offset="25%" stop-color="var(--color-instagram2)" />
+                                <stop offset="50%" stop-color="var(--color-instagram3)" />
+                                <stop offset="75%" stop-color="var(--color-instagram4)" />
+                                <stop offset="100%" stop-color="var(--color-instagram5)" />
+                            </linearGradient>
+                            <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                        </svg>
+                    </a>
+                </div>
+                <!-- <div class="header__social">
+                        <a class="header__link" href="/cart">
+                            <svg class="header__link-icon">
+                                <use xlink:href="img/sprite.svg#icon-cart"></use>
+                            </svg>
+                        </a>
+                        <span id="cartcount" class="user-nav__notification">0</span>
+                    </div> -->
+            </nav>
+        </header>
+        <div class="content">
+            @RenderBody()
+            <footer class="footer">
+                <div class="footer__columns">
+                    <div class="footer__column">
+                        <h2>DOWD Signage</h2>
+                        <ul>
+                            <li>
+                                <a class="footer__link" href="/">
+                                    <svg class="footer__icon">
+                                        <use xlink:href="img/sprite.svg#icon-home"></use>
+                                    </svg>
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a class="footer__link" href="/gnomes">
+                                    <svg class="footer__icon">
+                                        <use xlink:href="img/sprite.svg#icon-printer"></use>
+                                    </svg>
+                                    Products
+                                </a>
+                            </li>
+                            <li>
+                                <a class="footer__link" href="/partners">
+                                    <svg class="footer__icon">
+                                        <use xlink:href="img/sprite.svg#icon-clipboard"></use>
+                                    </svg>
+                                    Quotes
+                                </a>
+                            </li>
+                            <li>
+                                <a class="footer__link" href="/prices">
+                                    <svg class="footer__icon">
+                                        <use xlink:href="img/sprite.svg#icon-envelop"></use>
+                                    </svg>
+                                    Contact us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h2>Contact us</h2>
+                        <ul>
+                            <li>
+                                <a class="footer__link" href="mailto:quotes@dowd.co.za">
+                                    <svg class="footer__icon">
+                                        <use xlink:href="img/sprite.svg#icon-envelop"></use>
+                                    </svg>
+                                    quotes@dowd.co.za
+                                </a>
+                            </li>
+                            <li>
+                                <a class="footer__link" href="tel:+27219481771">
+                                    <svg class="footer__icon">
+                                        <use xlink:href="img/sprite.svg#icon-phone"></use>
+                                    </svg>
+                                    (021) 948-1771
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h2>Follow us</h2>
+                        <ul>
+                            <li>
+                                <a class="footer__link" href="https://www.facebook.com/DowdSignage/" target="_blank">
+                                    <svg class="footer__icon">
+                                        <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                                    </svg>
+                                    Facebook
+                                </a>
+                                <a class="footer__link" href="https://www.instagram.com/dowd_signage/" target="_blank">
+                                    <svg class="footer__icon">
+                                        <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                                    </svg>
+                                    Instagram
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__copyright">
+                    <span>
+                        &copy; 2021 DOWD Signage. All rights reserved.
+                    </span>
+                    <span>
+                        Powered by Trublo.com
+                    </span>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvGAKKcNOITEZ4ScLSPzPUx6SL-REsRh4&callback=initMap&libraries=&v=beta&map_ids=36e195eec4ec377"
+        defer></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            var cartarray = getCart();
+            document.getElementById("cartcount").innerHTML = cartarray.length;
+        });
+        function getCart() {
+            var cart = localStorage.getItem("cartitems");
+            var cartarray = [];
+            if (cart != null) {
+                var cartarray = JSON.parse(cart);
+            }
+            return cartarray;
+        }
+        function addToCart(e) {
+            var cartarray = getCart();
+            e.parentNode.dataset["id"] = new Date().getTime();
+            cartarray.push(e.parentNode.dataset);
+            document.getElementById("cartcount").innerHTML = cartarray.length;
+            localStorage.setItem("cartitems", JSON.stringify(cartarray));
+            console.log(localStorage.getItem("cartitems"));
+        }
+        function initMap() {
+            const latlon = { lat: -33.896, lng: 18.663 };
+            const map = new google.maps.Map(document.getElementById("map"), {
+                mapId: "36e195eec4ec377",
+                center: latlon,
+                zoom: 13,
+                disableDefaultUI: true,
+                scrollwheel: false,
+                navigationControl: false,
+                mapTypeControl: false,
+                scaleControl: false,
+                draggable: false,
+            });
+            new google.maps.Marker({
+                position: latlon,
+                map,
+                title: "DOWD",
+            });
+        }
+    </script>
+</body>
+
+</html>
