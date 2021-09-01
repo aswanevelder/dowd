@@ -22,6 +22,7 @@ namespace dowd
             services.AddTransient<IAWSS3, AWSS3>();
             services.AddTransient<ISendGridService, SendGridService>();
             services.AddControllersWithViews();
+            services.AddRouting(options => options.LowercaseUrls = true);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

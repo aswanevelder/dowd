@@ -30,18 +30,10 @@
     top: 0rem;
     width: 100%;
 
-    @media only screen and (max-width: $bp_smallest) {
-        justify-content: flex-end;
-    }
-
     &__label {
         margin-left: 2rem;
         font-weight: 600;
         text-transform: uppercase;
-
-        @media only screen and (max-width: $bp_smallest) {
-            display: none;
-        }
     }
 
     &__social {
@@ -104,7 +96,7 @@
     flex-direction: column;
     justify-content: space-between;
     z-index: 1000;
-    height: 7rem;
+    height: 6.2rem;
 
     @media only screen and (min-width: $bp_small) {
         position: fixed;

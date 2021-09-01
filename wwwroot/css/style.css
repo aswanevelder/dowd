@@ -88,16 +88,10 @@ body {
   position: fixed;
   top: 0rem;
   width: 100%; }
-  @media only screen and (max-width: 31.25em) {
-    .header {
-      justify-content: flex-end; } }
   .header__label {
     margin-left: 2rem;
     font-weight: 600;
     text-transform: uppercase; }
-    @media only screen and (max-width: 31.25em) {
-      .header__label {
-        display: none; } }
   .header__social {
     display: flex;
     justify-content: center; }
@@ -141,7 +135,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   z-index: 1000;
-  height: 7rem; }
+  height: 6.2rem; }
   @media only screen and (min-width: 37.5em) {
     .menu {
       position: fixed;
@@ -1059,7 +1053,7 @@ body {
     font-size: 1.6rem;
     padding: 2rem;
     vertical-align: top;
-    text-align: justify; }
+    text-align: left; }
 
 .map__control {
   display: flex;
@@ -1088,6 +1082,9 @@ body {
 
 .form {
   margin-top: 10rem; }
+  @media only screen and (max-width: 37.5em) {
+    .form {
+      margin-top: 4rem; } }
   .form__card {
     background-color: var(--color-primary-transparent);
     min-height: 30rem;

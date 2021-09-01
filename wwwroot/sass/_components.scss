@@ -1142,7 +1142,7 @@
         font-size: 1.6rem;
         padding: 2rem;
         vertical-align: top;
-        text-align: justify;
+        text-align: left;
         
     }
 }
@@ -1184,6 +1184,10 @@
 
 .form {
     margin-top:10rem;
+
+    @media only screen and (max-width: $bp_small) {
+        margin-top:4rem;
+    }
 
     &__card {
         background-color: var(--color-primary-transparent);

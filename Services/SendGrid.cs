@@ -87,10 +87,6 @@ namespace dowd.Services
                     });
 
                     var response = await sendGridClient.SendEmailAsync(sendGridMessage);
-
-                    sendGridMessage.AddTo(model.Email, model.ContactPerson);
-                    sendGridMessage.SetFrom(_siteEmail, _siteName);
-                    response = await sendGridClient.SendEmailAsync(sendGridMessage);
                     return response;
                 }
                 else
@@ -134,10 +130,6 @@ namespace dowd.Services
                     });
 
                     var response = await sendGridClient.SendEmailAsync(sendGridMessage);
-
-                    sendGridMessage.AddTo(model.Email, model.ContactPerson);
-                    sendGridMessage.SetFrom(_siteEmail, _siteName);
-                    response = await sendGridClient.SendEmailAsync(sendGridMessage);
                     return response;
                 }
                 else
