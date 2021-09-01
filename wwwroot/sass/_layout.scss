@@ -25,6 +25,10 @@
     align-items: center;
     position: absolute;
     width:100%;
+    z-index: 1000;
+    position: fixed;
+    top: 0rem;
+    width: 100%;
 
     @media only screen and (max-width: $bp_smallest) {
         justify-content: flex-end;
@@ -93,15 +97,28 @@
 }
 
 .menu {
-    position: absolute;
-    width: 100%;
-    top:3rem;
     background-color: var(--color-grey-dark1-transparent);
     color: var(--color-grey-light2);
     flex: 0 0 18%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    z-index: 1000;
+    height: 7rem;
+
+    @media only screen and (min-width: $bp_small) {
+        position: fixed;
+        top: 3rem;
+        width: 100%;
+    }
+
+    @media only screen and (max-width: $bp_small) {
+        position: fixed;
+        bottom: 0;
+        top: auto;
+        width: 100%;
+    }
+    
 }
 
 .main-view {
@@ -181,6 +198,10 @@
     justify-content: space-between;
     text-transform: uppercase;
     padding: 1rem;
+
+    @media only screen and (max-width: $bp_small) {
+        padding-bottom: 7rem;
+    }
 
     &__copyright {
         display: flex;

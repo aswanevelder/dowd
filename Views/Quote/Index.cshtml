@@ -2,40 +2,8 @@
 
 @{
     ViewData["Title"] = "QUOTE - ";
+    ViewData["QuoteMenu"] = "menu-nav__item--active";
 }
-<nav class="menu">
-    <ul class="menu-nav">
-        <li class="menu-nav__item">
-            <a href="/" class="menu-nav__link">
-                <img src="img/logo.png" class="menu-nav__logo">
-            </a>
-        </li>
-        <li class="menu-nav__item">
-            <a href="/#products" class="menu-nav__link">
-                <svg class="menu-nav__icon">
-                    <use xlink:href="img/sprite.svg#icon-printer"></use>
-                </svg>
-                <span>Products</span>
-            </a>
-        </li>
-        <li class="menu-nav__item menu-nav__item--active">
-            <a href=" quote" class="menu-nav__link">
-                <svg class=" menu-nav__icon">
-                    <use xlink:href="img/sprite.svg#icon-clipboard"></use>
-                </svg>
-                <span>Quotes</span>
-            </a>
-        </li>
-        <li class="menu-nav__item">
-            <a href="contact" class="menu-nav__link">
-                <svg class="menu-nav__icon">
-                    <use xlink:href="img/sprite.svg#icon-envelop"></use>
-                </svg>
-                <span>Contact us</span>
-            </a>
-        </li>
-    </ul>
-</nav>
 <main class="main-view">
     <form asp-action="Index" method="post" enctype="multipart/form-data">
         <div class="form">
@@ -86,6 +54,7 @@
                                     </label>
                                 }
                             </div>
+                            <span asp-validation-for="Product" class="input__validation"></span>
                         </div>
                     </div>
                 </div>
@@ -95,7 +64,7 @@
                             <span class="input__label">Upload Artwork</span>
                             <div id="drop-area">
                                 <p class="input__p"><b>Choose files with button below. ***</b></p>
-                                <input class="btn" type="file" id="fileElem" multiple><br /><br />
+                                <input class="btn" type="file" id="files" name="files" multiple><br /><br />
                                 <p class="input__p">*** File Format for Artwork: PDF (our first choice) CDR, JPEG, BMP,
                                     EPS.
                                     Files to create artwork for proof: CDR (our first choice), EPS, DWG, DXF, VECTOR

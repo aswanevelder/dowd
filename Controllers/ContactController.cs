@@ -8,12 +8,12 @@ using dowd.Services;
 
 namespace dowd.Controllers
 {
-    public class QuoteController : Controller
+    public class ContactController : Controller
     {
-        private readonly ILogger<QuoteController> _logger;
+        private readonly ILogger<ContactController> _logger;
         private readonly IAWSS3 _s3;
         private readonly ISendGridService _mail;
-        public QuoteController(ILogger<QuoteController> logger, IAWSS3 s3, ISendGridService mail)
+        public ContactController(ILogger<ContactController> logger, IAWSS3 s3, ISendGridService mail)
         {
             _logger = logger;
             _s3 = s3;
@@ -22,20 +22,17 @@ namespace dowd.Controllers
 
         public IActionResult Index()
         {
-            return View(new Quote());
+            return View(new Contact());
         }
 
         [HttpPost]
-        [RequestFormLimits(MultipartBodyLengthLimit = 209715200)]
-        [RequestSizeLimit(209715200)]
-        public async Task<ActionResult> Index(Quote model, IEnumerable<IFormFile> files)
+        public async Task<ActionResult> Index(Contact model)
         {
             if (model != null)
             {
                 if (ModelState.IsValid)
                 {
-                    var filenames = await _s3.Write(files);
-                    var response = await _mail.SendQuote(model, filenames);
+                    var response = await _mail.SendContact(model);
                     if (response != null)
                     {
                         if (response.IsSuccessStatusCode)

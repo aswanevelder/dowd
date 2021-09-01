@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "FAILED - ";
+    ViewData["QuoteMenu"] = "menu-nav__item--active";
+}
+<main class="main-view">
+    <form asp-action="Index" method="post" enctype="multipart/form-data">
+        <div class="form">
+            <h1 id="products" class="main-view__heading">SEND FAILED</h1>
+            <div class="form__card">
+                <div class="form__card-row">
+                    <svg class="bigicon">
+                        <use xlink:href="../img/sprite.svg#icon-cross"></use>
+                    </svg>
+                </div>
+                <div class="form__card-row">
+                    <h1 class="white center">Your request failed, it might be that the file size is too large. Please
+                        try again
+                        or alternatively email us.</h1>
+                </div>
+            </div>
+        </div>
+        </div>
+    </form>
+</main>

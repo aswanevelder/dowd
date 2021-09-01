@@ -1,36 +1,6 @@
-﻿<nav class="menu">
-    <ul class="menu-nav">
-        <li class="menu-nav__item menu-nav__item--active">
-            <a href="/" class="menu-nav__link">
-                <img src="img/logo.png" class="menu-nav__logo">
-            </a>
-        </li>
-        <li class="menu-nav__item">
-            <a href="/#products" class="menu-nav__link">
-                <svg class="menu-nav__icon">
-                    <use xlink:href="img/sprite.svg#icon-printer"></use>
-                </svg>
-                <span>Products</span>
-            </a>
-        </li>
-        <li class="menu-nav__item">
-            <a href="quote" class="menu-nav__link">
-                <svg class="menu-nav__icon">
-                    <use xlink:href="img/sprite.svg#icon-clipboard"></use>
-                </svg>
-                <span>Quotes</span>
-            </a>
-        </li>
-        <li class="menu-nav__item">
-            <a href="contact" class="menu-nav__link">
-                <svg class="menu-nav__icon">
-                    <use xlink:href="img/sprite.svg#icon-envelop"></use>
-                </svg>
-                <span>Contact us</span>
-            </a>
-        </li>
-    </ul>
-</nav>
+﻿@{
+    ViewData["HomeMenu"] = "menu-nav__item--active";
+}
 <main class="main-view">
     <div class="banner">
         <video playsinline autoplay muted loop class="main-view__backgroundvideo">
@@ -275,7 +245,35 @@
             </svg>
             <span class="main-features__heading">Branding Iron</span>
         </div>
+        <div class="main-features__item">
+            <svg class="main-features__icon">
+                <use xlink:href="img/sprite.svg#icon-star-full"></use>
+            </svg>
+            <span class="main-features__heading">Badges</span>
+        </div>
+        <div class="main-features__item">
+            <svg class="main-features__icon">
+                <use xlink:href="img/sprite.svg#icon-star-full"></use>
+            </svg>
+            <span class="main-features__heading">Wallpaper</span>
+        </div>
     </div>
+    <h1 id="products" class="main-view__heading">MORE THAN 5000 CLIENTS</h1>
+    <div class="client-logos">
+        <img src="/img/clients/logo1.png" class="client-logos__h80" />
+        <img src="/img/clients/logo2.png" class="client-logos__h80" />
+        <img src="/img/clients/logo3.png" class="client-logos__h100" />
+        <img src="/img/clients/logo4.png" class="client-logos__h120" />
+        <img src="/img/clients/logo5.png" class="client-logos__h80" />
+        <img src="/img/clients/logo6.png" class="client-logos__h80" />
+        <img src="/img/clients/logo7.png" class="client-logos__h80" />
+        <img src="/img/clients/logo8.png" class="client-logos__h80" />
+        <img src="/img/clients/logo9.png" class="client-logos__h80" />
+        <img src="/img/clients/logo10.png" class="client-logos__h80" />
+        <img src="/img/clients/logo11.png" class="client-logos__h80" />
+        <img src="/img/clients/logo12.png" class="client-logos__h80" />
+    </div>
+
     <div class="map">
         <div class="map__overlay">
             <h4 class="map__title">DOWD Signage</h4>

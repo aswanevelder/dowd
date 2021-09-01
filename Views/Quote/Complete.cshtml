@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "CONFIRM - ";
+    ViewData["QuoteMenu"] = "menu-nav__item--active";
+}
+
+<main class="main-view">
+    <form asp-action="Index" method="post" enctype="multipart/form-data">
+        <div class="form">
+            <h1 id="products" class="main-view__heading">QUOTE RECEIVED</h1>
+            <div class="form__card">
+                <div class="form__card-row">
+                    <svg class="bigicon">
+                        <use xlink:href="../img/sprite.svg#icon-checkmark"></use>
+                    </svg>
+                </div>
+                <div class="form__card-row">
+                    <h1 class="white">Thank you, we received your request.</h1>
+                </div>
+            </div>
+        </div>
+        </div>
+    </form>
+</main>

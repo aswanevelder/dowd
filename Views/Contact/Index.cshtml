@@ -1,0 +1,60 @@
+﻿@model Contact
+
+@{
+    ViewData["Title"] = "CONTACT - ";
+    ViewData["ContactMenu"] = "menu-nav__item--active";
+}
+<main class="main-view">
+    <form asp-action="Index" method="post" enctype="multipart/form-data">
+        <div class="form">
+            <h1 id="products" class="main-view__heading">CONTACT US</h1>
+            <div class="form__card">
+                <div class="form__card-row">
+                    <div class="form__card-col">
+                        <div class="input__group">
+                            <label asp-for="Company" class="input__label-required"></label>
+                            <input asp-for="Company" class="input__control">
+                            <span asp-validation-for="Company" class="input__validation"></span>
+                        </div>
+                    </div>
+                    <div class="form__card-col">
+                        <div class="input__group">
+                            <label asp-for="ContactPerson" class="input__label-required"></label>
+                            <input asp-for="ContactPerson" class="input__control">
+                            <span asp-validation-for="ContactPerson" class="input__validation"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__card-row">
+                    <div class="form__card-col">
+                        <div class="input__group">
+                            <label asp-for="Email" class="input__label-required"></label>
+                            <input asp-for="Email" class="input__control">
+                            <span asp-validation-for="Email" class="input__validation"></span>
+                        </div>
+                    </div>
+                    <div class="form__card-col">
+                        <div class="input__group">
+                            <label asp-for="Phone" class="input__label"></label>
+                            <input asp-for="Phone" class="input__control">
+                            <span asp-validation-for="Phone" class="input__validation"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__card-row">
+                    <div class="form__card-col">
+                        <div class="input__group">
+                            <label asp-for="Message" class="input__label-required"></label>
+                            <textarea asp-for="Message" class="input__control" rows="20"></textarea>
+                            <span asp-validation-for="Message" class="input__validation"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-stretch">
+                <span class="btn__visible">CONTACT US</span>
+                <span class="btn__invisible">SEND</span>
+            </button>
+        </div>
+    </form>
+</main>
