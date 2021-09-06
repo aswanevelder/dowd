@@ -16,7 +16,7 @@
 <body>
     <div class="container">
         <header class="header">
-            <span class="header__label">DOWD</span>
+            <span class="header__logo"><img src="/img/logo.png"></span>
             <nav class="user-nav">
                 <div class="header__social">
                     <a class="header__link" href="tel:+27219481771" target="_blank">
@@ -92,7 +92,10 @@
                 <ul class="menu-nav">
                     <li class="menu-nav__item @ViewData["HomeMenu"]">
                         <a href="/" class="menu-nav__link">
-                            <img src="/img/logo.png" class="menu-nav__logo">
+                            <svg class="menu-nav__icon">
+                                <use xlink:href="/img/sprite.svg#icon-home"></use>
+                            </svg>
+                            <span>Home</span>
                         </a>
                     </li>
                     <li class="menu-nav__item">
